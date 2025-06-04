@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 14:06:17 by sasano            #+#    #+#             */
-/*   Updated: 2024/12/28 14:06:22 by sasano           ###   ########.fr       */
+/*   Updated: 2025/06/04 14:05:51 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 # define CONTACT_HPP
 
 # include <iostream>
-// # include <string>
-// #include <iomanip>
+# include <string>
+#include <iomanip>
 # include <cctype>
 
 class Contact {
@@ -29,7 +29,9 @@ class Contact {
     public:
         Contact();
         ~Contact();
-        void Contact(const std::string first_name, const std::string last_name, const std::string nickname, const std::string phone_number, const std::string darkest_secret);
+        Contact(const std::string first_name, const std::string last_name, const std::string nickname, const std::string phone_number, const std::string darkest_secret);
+        int isnull();
+        void display_list() const;
         void display() const;
 };
 

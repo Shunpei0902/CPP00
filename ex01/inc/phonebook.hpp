@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 14:06:32 by sasano            #+#    #+#             */
-/*   Updated: 2024/12/28 14:06:34 by sasano           ###   ########.fr       */
+/*   Updated: 2025/06/04 14:11:52 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ class Phonebook {
         Phonebook();
         ~Phonebook();
         void add();
-        void search() const;
-}
+        void search();
+};
 #endif
