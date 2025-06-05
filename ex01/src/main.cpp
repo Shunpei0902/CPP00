@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 14:06:55 by sasano            #+#    #+#             */
-/*   Updated: 2025/06/04 12:15:44 by sasano           ###   ########.fr       */
+/*   Updated: 2025/06/05 18:07:12 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@ int main()
     {
         std::cout << "Enter a command: ";
         std::getline(std::cin, command);
+        if (std::cin.eof())
+        {
+            std::cout << std::endl;
+            break;
+        }
         if (command == "ADD")
             phonebook.add();
         else if (command == "SEARCH")

@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 14:06:40 by sasano            #+#    #+#             */
-/*   Updated: 2025/06/04 16:42:43 by sasano           ###   ########.fr       */
+/*   Updated: 2025/06/05 18:08:13 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,11 @@ void Phonebook::add()
 
     std::cout << "Enter first name: ";
     std::getline(std::cin, first_name);
+    if (std::cin.eof())
+    {
+        std::cout << std::endl;
+        return ;
+    }
     if (first_name.empty() || first_name.find_first_of(" \t\r\v\f") != std::string::npos)
     {
         std::cout << "First name cannot be empty or contain whitespace characters." << std::endl;
@@ -40,6 +45,11 @@ void Phonebook::add()
     }
     std::cout << "Enter last name: ";
     std::getline(std::cin, last_name);
+    if (std::cin.eof())
+    {
+        std::cout << std::endl;
+        return ;
+    }
     if (last_name.empty() || last_name.find_first_of(" \t\r\v\f") != std::string::npos)
     {
         std::cout << "Last name cannot be empty or contain whitespace characters." << std::endl;
@@ -47,6 +57,11 @@ void Phonebook::add()
     }
     std::cout << "Enter nickname: ";
     std::getline(std::cin, nickname);
+    if (std::cin.eof())
+    {
+        std::cout << std::endl;
+        return ;
+    }
     if (nickname.empty() || nickname.find_first_of(" \t\r\v\f") != std::string::npos)
     {
         std::cout << "Nickname cannot be empty or contain whitespace characters." << std::endl;
@@ -54,6 +69,11 @@ void Phonebook::add()
     }
     std::cout << "Enter phone number: ";
     std::getline(std::cin, phone_number);
+    if (std::cin.eof())
+    {
+        std::cout << std::endl;
+        return ;
+    }
     if (phone_number.empty() || phone_number.find_first_of(" \t\r\v\f") != std::string::npos)
     {
         std::cout << "Phone number cannot be empty or contain whitespace characters." << std::endl;
@@ -61,6 +81,11 @@ void Phonebook::add()
     }
     std::cout << "Enter darkest secret: ";
     std::getline(std::cin, darkest_secret);
+    if (std::cin.eof())
+    {
+        std::cout << std::endl;
+        return ;
+    }
     if (darkest_secret.empty() || darkest_secret.find_first_of(" \t\r\v\f") != std::string::npos)
     {
         std::cout << "Darkest secret cannot be empty or contain whitespace characters." << std::endl;
